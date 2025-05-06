@@ -1,10 +1,11 @@
+
+from lib.data import HumanData
+from lib.face_recognition import detectFace, displayInfo
+
 import cv2
 import numpy as np
 import time
 import random
-
-from data import HumanData, firstnames, lastnames
-from face_recognition import detectFace, displayInfo
 
 prevHumanData: list[HumanData] = []
 humanData: list[HumanData] = []
@@ -124,8 +125,6 @@ def basicDetection():
 def main():
     print("started")
     # Load the text file with names in it
-    firstnames("name.txt")
-    lastnames("name.txt")
     basicDetection()
 
 

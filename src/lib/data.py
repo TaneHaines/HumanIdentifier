@@ -1,10 +1,14 @@
 import random
 import cv2
+import os
 
-firstnames = lambda file: [line.strip() for line in open(file).readlines()]
-lastnames = lambda file: [line.strip() for line in open(file).readlines()]
+names = lambda file: [
+    line.strip() for line in open(
+        os.path.join(os.path.dirname(__file__), '..', '..', 'db', file)
+        ).readlines()
+]
 
-firstname = firstnames("name.txt")
+firstname = names("name.txt")
 
 class HumanData:
     def __init__(self, faceBox, cropped_face, id=300000000):

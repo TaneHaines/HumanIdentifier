@@ -1,6 +1,6 @@
 import cv2
 
-from data import HumanData
+from lib.data import HumanData
 
 # Detect Faces from an image
 def detectFace(greyImage):
